@@ -153,6 +153,10 @@ $user = array(
 // Many people ask me questions because of their mis-usage of these parameters...
 
 $basedir = @dirname(__FILE__);    // Base directory = local directory
+//Check if a URL was passed in, if so, change basedir
+if(isset($_GET["dir"])){
+	$basedir = $_GET["dir"];
+}
 //$basedir = "/foo/bar";          // Base directory = custom directory (UNIX)
 //$basedir = "c:/My Documents";   // Base directory = custom directory (WINDOWS)
 
